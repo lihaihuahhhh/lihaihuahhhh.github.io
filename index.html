@@ -1,1 +1,309 @@
-东西不想写进来了，就这样吧，累了。
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lhh</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-image: url(images/简约.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+
+        .navigation {
+            display: none;
+            z-index: 0;
+        }
+
+        /* h1是导航栏的设计 */
+        h1 {
+            font-size: 20px;
+            font-family: "楷体";
+            font-weight: 700;
+            text-indent: 2em;
+            float: left;
+        }
+
+        .nav_ul {
+            height: 50px;
+            float: right;
+            margin-right: 250px;
+        }
+
+        .nav_ul li {
+            width: 85px;
+            height: 30px;
+            list-style: none;
+            text-align: center;
+            float: left;
+            line-height: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-family: "楷体";
+            font-size: 19px;
+            background: url(images/zhuanhuan.png) repeat 0px 0px;
+        }
+
+        .nav_ul li a {
+            /* background: url(images/zhuanhuan.png) repeat 0px 0px; */
+            text-decoration: none;
+            display: block;
+            color: rgb(0, 0, 1);
+        }
+
+        /* 这里制作特效 */
+        .nav_ul li :hover {
+            /* border-bottom: 1px solid rgb(0, 0, 1);
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all .5s linear .2s; */
+            background: url(images/zhuanhuan.png) repeat 0px -28px;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        */
+        /* 以上是导航栏的样式 */
+        /* 下面是首页的样式 */
+
+        .first_page {
+            position: relative;
+        }
+
+        .first_page_img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid white;
+            border-radius: 100px;
+            overflow: hidden;
+            position: absolute;
+            top: 141px;
+            left: 574px;
+        }
+
+        .first_page_name {
+            width: 225px;
+            height: 35px;
+            position: absolute;
+            top: 350px;
+            left: 600px;
+            font-family: "楷体";
+            font-size: 19px;
+
+        }
+
+        /* 首页的样式制作完毕 */
+        /* 以下是介绍的样式\ */
+
+        .introduce {
+            width: 1298px;
+            height: 460px;
+            background-color: rgb(252, 252, 252);
+            position: relative;
+            top: 40px;
+            left: 34px;
+        }
+
+        .introduce_img {
+            width: 400px;
+            height: 460px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .introduce_text {
+            position: absolute;
+            left: 450px;
+            font-family: "楷体";
+            font-size: 19px;
+            text-indent: 2em;
+        }
+
+        /* 以下是技能的样式 */
+
+        .technology {
+            width: 1298px;
+            height: 460px;
+            background-color: rgb(252, 252, 252);
+            position: relative;
+            top: 40px;
+            left: 34px;
+        }
+
+        .technology_img {
+            width: 400px;
+            height: 460px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .technology_text {
+            position: absolute;
+            left: 450px;
+            font-family: "楷体";
+            font-size: 19px;
+            text-indent: 2em;
+        }
+
+        /* 以下是性格爱好的样式 */
+
+        .nature_hobby {
+            width: 1298px;
+            height: 460px;
+            background-color: rgb(252, 252, 252);
+            position: relative;
+            top: 40px;
+            left: 34px;
+        }
+
+        .nature_hobby_img {
+            width: 400px;
+            height: 460px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .nature_hobby_text {
+            position: absolute;
+            left: 450px;
+            font-family: "楷体";
+            font-size: 19px;
+            text-indent: 2em;
+        }
+
+        /* 以下是空闲的样式 */
+
+        .free {
+            width: 1298px;
+            height: 460px;
+            background-color: rgb(252, 252, 252);
+            position: relative;
+            top: 40px;
+            left: 34px;
+        }
+
+        .free_img {
+            width: 400px;
+            height: 460px;
+            position: absolute;
+            left: 0px;
+        }
+
+        .free_text {
+            position: absolute;
+            left: 450px;
+            font-family: "楷体";
+            font-size: 19px;
+            text-indent: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏的设计，一个标题，五个标签，都是网页内部链接 -->
+    <nav>
+        <h1>穿着拖鞋攒阳光</h1>
+        <ul class="nav_ul">
+            <li index="0"><a href="#first_page">首页</a></li>
+            <li index="1"><a href="#introduce">介绍</a></li>
+            <li index="2"><a href="#technology">技术</a></li>
+            <li index="3"><a href="#nature_hobby">性格爱好</a></li>
+            <li index="4"><a href="#free">空闲</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- 首页的制作，这里我计划用五个大盒子与导航栏的链接连接，利用DOM获取元素，通过鼠标点击进行盒子的隐藏和显示,js进行链接 -->
+    <div class="first_page navigation" style="display: block;">
+        <div class="first_page_img">
+            <img src="images/touxiang.png" alt="">
+        </div>
+        <div class="first_page_name">在下版本，有何贵干</div>
+    </div>
+
+    <!-- 介绍的制做 -->
+
+    <div class="introduce navigation">
+
+        <div class="introduce_img">
+            <img src="images/stone.jpg" alt="">
+        </div>
+        <div class="introduce_text">
+            <p>我喜欢独处。我有一只猫，曾经也有一只狗。猫是蓝白，狗是土狗。我有一把吉他，四根弦，一弦断了，便也不想补了，
+                美好的时日从我指尖悄然划过，一弦再也用不到了，也不想续了。我从小城而来，却不知所往，满心迷茫，不知前路，迷恋
+                小城的休闲，向往前方的风景，世界这么大，我也想看看。</p>
+            <p>若为自由故，两者皆可抛。湖边晚风，路旁酒摊，原是微醺，却见路人跌跌撞撞，影影绰绰。走快些，红尘繁忙，人人为利
+                来，为利去，莫要睡倒在路边，挡了他人前路。你看，我也本是个感性的人，奈何学了编程这什劳子事，连文案都得自己构思。</p>
+            <p>罢了，饿了，去帮忙了，对会做饭的人很有好感，可惜我只会吃。</p>
+        </div>
+    </div>
+
+    <!-- 专业技能的介绍制作 -->
+    <div class="technology navigation">
+        <div class="technology_img">
+            <img src="images/technology.jpg" alt="">
+        </div>
+        <div class="technology_text">
+            <p>我会的技能：HTML,CSS,JavaScript,jQuery,Vue,DOM,BOM,AJAX,Python,爬虫,机器学习基础,OpenCV,数据结构，
+                计算机网络,数据库操作与应用,计算机组成原理,操作系统,Github</p>
+            <p>参加了校创《网球机器人视觉系统》,旨在为实现动态接发球功能的网球计算机设计一种基于智能图像处理算法的视觉系统。</p>
+            <p> 实习经历:参加过社会实践，在电信实习一个月，移动实习一个月，有着一定的社会实践经历。</p>
+        </div>
+    </div>
+
+
+    <!-- 兴趣爱好的介绍制作 -->
+
+    <div class="nature_hobby navigation">
+        <div class="nature_hobby_img">
+            <img src="images/pione.jpg" alt="">
+        </div>
+        <div class="nature_hobby_text">
+            <p>爱好写什么呢，好像没啥可写的，不写了吧，对了，吉他我不喜欢了,我需要美术设计小姐姐和文案设计小姐姐，男的也行呀。
+                怎么才能认识艺术院的学生呢？
+            </p>
+        </div>
+    </div>
+
+    <!-- 空闲的制作 -->
+    <div class="free navigation">
+        <div class="free_img">
+            <img src="images/manpic.jpg" alt="">
+        </div>
+        <div class="free_text">实在不知道怎么设计，也不知道写啥了，有啥建议吗，没法发表单域了，因为这是要发布在github上
+            的，只能做个静态网页了，哈哈，等有钱了买个服务器，话有点多的原因是我想攒够两行。</div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        var tab1 = document.getElementsByClassName('nav_ul');
+        var tab = tab1[0].getElementsByTagName('li');
+        var items = document.getElementsByClassName('navigation');
+        for (var i = 0; i < tab.length; i++) {
+            tab[i].onclick = function () {
+                var index = this.getAttribute('index');
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                items[index].style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
